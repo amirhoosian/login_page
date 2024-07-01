@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
-          children: [_getheder(), SizedBox(height: 15), _mainbody()],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [_getheder(), SizedBox(height: 15), _mainbody()],
+          ),
         ),
       ),
     );
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
 
   Widget _mainbody() {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Card(
           margin: EdgeInsets.symmetric(horizontal: 25, vertical: 2),
